@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { Shield, Heart, Users, MessageCircle, HeadphonesIcon, CheckCircle, HardHat, Activity } from 'lucide-react';
 import Navbar from './components/Navbar';
+import fotoWerbet from './assets/foto.png';
+import jingleAudio from './assets/Música OFC _ Werbet da CIPA.mp3';
 
 function App() {
   const [isVisible, setIsVisible] = useState<{ [key: string]: boolean }>({});
@@ -105,7 +107,7 @@ function App() {
                 <div className="absolute inset-0 bg-yellow-400 rounded-3xl transform rotate-6 opacity-20 blur-xl"></div>
                 <div className="relative bg-white/10 backdrop-blur-sm p-8 rounded-3xl border-4 border-yellow-400 shadow-2xl">
                   <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden">
-                    <img src="/src/assets/foto.png" alt="Foto de Werbet" className="w-full h-full object-cover" />
+                    <img src={fotoWerbet} alt="Foto de Werbet" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
@@ -312,7 +314,7 @@ function App() {
                     <audio 
                       controls 
                       className="w-full"
-                      src="/src/assets/Música OFC _ Werbet da CIPA.mp3"
+                      src={jingleAudio}
                     >
                       Seu navegador não suporta o elemento de áudio.
                     </audio>
